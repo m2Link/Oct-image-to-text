@@ -51,7 +51,7 @@ def start(update,context):
                     ],
                     [   InlineKeyboardButton('🤖Bot List', url='https://t.me/m2botz/17')
                 ]
-            )
+            ]
         )
     reply_markup = InlineKeyboardMarkup(keybord1)
     update.message.reply_text('Hi! '+str(first)+' \n\nWelcome to OCR Bot.\n\nJust send a clear image to me and i will recognize the text in the image and send it as a message!\n\nCheck /help for more...\n\nCreate your Own Bot by Watching Tutorial', reply_markup=reply_markup)
