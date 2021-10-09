@@ -66,6 +66,16 @@ def help(update,context):
     update.message.reply_text('Hi! '+str(first)+' \n\nFollow these steps...\n➥ First Send me a Clear Image to me \n➥ Select the Language to Extract Selected Language Text in Image \n➥ Extracted Text is Uploaded as Message!', reply_markup=reply_markup)
 
 
+def about(update,context):
+    """Send a message when the command /about is issued."""
+    global first
+    first=update.message.chat.first_name
+    keybord1 = [[InlineKeyboardButton("Update Channel", url="https://t.me/m2botz"),
+                 InlineKeyboardButton("Support Group", url="https://t.me/m2botzsupport")]]
+    reply_markup = InlineKeyboardMarkup(keybord1)
+    update.message.reply_text('Hi! '+str(first)+' \n\n🤖 About/n/n● Creator :/n● Channel :/n● Support ', reply_markup=reply_markup)
+
+
 @run_async
 @send_typing_action
 def convert_image(update,context):
